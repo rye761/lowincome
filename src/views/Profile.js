@@ -5,6 +5,10 @@ import Highlight from "../components/Highlight";
 import Loading from "../components/Loading";
 import { useAuth0 } from "../react-auth0-spa";
 
+//upload imports
+import { FilePond } from 'react-filepond';
+import 'filepond/dist/filepond.min.css';
+
 const Profile = () => {
   const { loading, user } = useAuth0();
 
@@ -21,6 +25,7 @@ const Profile = () => {
             alt="Profile"
             className="rounded-circle img-fluid profile-picture mb-3 mb-md-0"
           />
+
         </Col>
         <Col md>
           <h2>{user.name}</h2>
@@ -28,8 +33,12 @@ const Profile = () => {
         </Col>
       </Row>
       <Row>
+
+
         <Highlight>{JSON.stringify(user, null, 2)}</Highlight>
       </Row>
+          <h4>Upload Income Form</h4>
+          <FilePond server="ip"/>      
     </Container>
   );
 };
