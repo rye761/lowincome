@@ -3,44 +3,59 @@ import React, { useState, useEffect } from "react";
 import Loading from "../components/Loading";
 import { useAuth0 } from "../react-auth0-spa";
 
+import "./Dashboard.css";
+
 const DASHBOARD_ITEMS = [
   {
     name: "HSR Fare Subsidy",
+    organization: "By: Hamilton Street Rail",
     description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
     price: 50.99
   },
   {
     name: "HSR Fare Subsidy",
+    organization: "By: Hamilton Street Rail",
     description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
     price: 50.99
   },
   {
     name: "HSR Fare Subsidy",
+    organization: "By: Hamilton Street Rail",
     description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
     price: 50.99
   },
   {
     name: "HSR Fare Subsidy",
+    organization: "By: Hamilton Street Rail",
+
     description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
     price: 50.99
   },
   {
     name: "HSR Fare Subsidy",
+    organization: "By: Hamilton Street Rail",
+
     description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
     price: 50.99
   },
   {
     name: "HSR Fare Subsidy",
+    organization: "By: Hamilton Street Rail",
+
     description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
     price: 50.99
   },
   {
     name: "HSR Fare Subsidy",
+    organization: "By: Hamilton Street Rail",
+
     description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
     price: 50.99
   },
   {
     name: "HSR Fare Subsidy",
+    organization: "By: Hamilton Street Rail",
+
     description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
     price: 50.99
   }
@@ -61,9 +76,11 @@ const Profile = () => {
   const dashboardItems = items.map((item) => (
     <div className="dashboard-item">
       <h3>{ item.name }</h3>
+      <h5>{ item.organization }</h5>
       <h4>{ item.description }</h4>
       <h4>{ item.price }</h4>
     </div>
+
   ));
 
   return (
