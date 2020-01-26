@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 
 import Highlight from "../components/Highlight";
 import Loading from "../components/Loading";
 import { useAuth0 } from "../react-auth0-spa";
 
-//upload imports
-import { FilePond } from 'react-filepond';
-import 'filepond/dist/filepond.min.css';
 
 const Profile = () => {
   const { loading, user } = useAuth0();
+  const [ income, setIncome ] = useState(null);
+  const [ familyMembers, setFamilyMembers ] = useState(1);
 
   if (loading || !user) {
     return <Loading />;
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert('Income verified!');
+  }
+
+  function handleIncomeChange(e) {
+    setIncome(e.target.value);
+  }
+
+  function handleFamilyChange(e) {
+    setFamilyMembers(e.target.value);
   }
 
   return (
@@ -37,8 +49,18 @@ const Profile = () => {
 
         <Highlight>{JSON.stringify(user, null, 2)}</Highlight>
       </Row>
-          <h4>Upload Income Form</h4>
-          <FilePond server="ip"/>      
+          <h4>Income Form</h4>
+          <form onSubmit={handleSubmit}>
+            <label>Income:
+              <input type="text" value={income} onChange={handleIncomeChange} />
+            </label>
+            <br />
+            <label>Family members:
+              <input type="number" value={familyMembers} onChange={handleFamilyChange} min="0" />
+            </label>
+            <br />
+            <input type="submit" value="Verify" />
+          </form>
     </Container>
   );
 };
