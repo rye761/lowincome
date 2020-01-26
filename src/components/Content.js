@@ -9,7 +9,7 @@ class Content extends Component {
   render() {
     return (
       <div className="value-prop my-5">
-        <h2 className="my-5 text-center">What does IncomeMate provide?</h2>
+        <h2 className="my-5 text-center">What does WeProsper provide?</h2>
         <div className="pros-container">
           <div className="col-container">
             <h2>For Organizations</h2>

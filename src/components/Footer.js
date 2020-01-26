@@ -5,6 +5,7 @@ const Footer = () => (
     <div className="logo" />
     <p>
       Authentication provided by <a href="https://auth0.com">Auth0</a>
+    
     </p>
   </footer>
 );
