@@ -7,58 +7,43 @@ import "./Dashboard.css";
 
 const DASHBOARD_ITEMS = [
   {
-    name: "HSR Fare Subsidy",
+    name: "Affordable Transit Pass",
     organization: "By: Hamilton Street Rail",
-    description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
-    price: 50.99
-  },
-  {
-    name: "HSR Fare Subsidy",
-    organization: "By: Hamilton Street Rail",
-    description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
-    price: 50.99
-  },
-  {
-    name: "HSR Fare Subsidy",
-    organization: "By: Hamilton Street Rail",
-    description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
-    price: 50.99
-  },
-  {
-    name: "HSR Fare Subsidy",
-    organization: "By: Hamilton Street Rail",
+    description: "The program allows eligible residents to purchase an Adult Monthly Transit Pass for half price.",
+    price: 50.99,
+    url: "https://www.hamilton.ca/social-services/support-programs/affordable-transit-pass-program"
 
-    description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
-    price: 50.99
   },
   {
-    name: "HSR Fare Subsidy",
-    organization: "By: Hamilton Street Rail",
-
-    description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
-    price: 50.99
+    name: "Ontario Renovates Program for Homeowners",
+    organization: "By: Housing Services Divison",
+    description: "Low-income homeowners recieve financial assistance to repair their homes to minimum level of health and safety.",
+    price: 50.99,
+    url: "https://www.hamilton.ca/social-services/support-programs/ontario-renovates-program-homeowners"
   },
   {
-    name: "HSR Fare Subsidy",
-    organization: "By: Hamilton Street Rail",
-
-    description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
-    price: 50.99
+    name: "Ontario Electricity Support Program",
+    organization: "By: Onatario Energy Board",
+    description: "This program provides low-income consumers with a monthly on-bill credit to reduce their electricity bill.",
+    price: 50.99,
+    url: "https://www.oeb.ca/rates-and-your-bill/help-low-income-consumers/ontario-electricity-support-program"
   },
   {
-    name: "HSR Fare Subsidy",
-    organization: "By: Hamilton Street Rail",
-
-    description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
-    price: 50.99
+    name: "Low-income Energy Assistance Program (LEAP)",
+    organization: "By: Ontario Energy Board",
+    description: "This is a one-time grant towards your electricity or natural gas bill if you are behind on your bill and may face having your service shut off. It is for emergency situations.",
+    price: 50.99,
+    url: "https://www.oeb.ca/rates-and-your-bill/help-low-income-consumers/low-income-energy-assistance-program"
   },
   {
-    name: "HSR Fare Subsidy",
-    organization: "By: Hamilton Street Rail",
+    name: "Recreation Assistance Program",
+    organization: "By: City of Hamilton",
+    description: "This program allows low-income families the opportunity to participate in organized sports and recreation programs.",
+    price: 50.99,
+    url: "https://www.hamilton.ca/parks-recreation/registered-rec-programs/recreation-assistance-program"
 
-    description: "Low income families receive 50% lower fares on monthly passses with the HSR!",
-    price: 50.99
-  }
+  },
+  
 ];
 
 const Profile = () => {
@@ -79,12 +64,14 @@ const Profile = () => {
       <h5>{ item.organization }</h5>
       <h4>{ item.description }</h4>
       <h4>{ item.price }</h4>
+      <a href={ item.url } className="btn btn-link">More info</a>
     </div>
 
   ));
 
   return (
     <div className="dashboard-container">
+    <h6>Postings</h6>
       { dashboardItems }
     </div>
   );

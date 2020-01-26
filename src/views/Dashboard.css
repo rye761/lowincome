@@ -2,6 +2,8 @@
   border: 1.5px solid black;
   border-radius: 5px;
   margin-bottom: 30px;
+  margin: 50px;
+  margin-top: 30px;
 }
 
 h3
@@ -32,4 +34,12 @@ h5
 	margin-right: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
+}
+
+h6
+{
+	font-size:50px;
+	font-weight: bold;
+	margin-left: 50px;
+	margin-top: 30px;
 }
