@@ -1,0 +1,12 @@
+.splash {
+  background: url('../assets/splash.jpg');
+  background-size: cover;
+  padding: 200px 100px;
+}
+
+.splash-content {
+  background-color: rgba(255, 255, 255, 0.7);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px;
+}
