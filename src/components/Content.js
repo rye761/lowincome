@@ -3,26 +3,29 @@ import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import contentData from "../utils/contentData";
+import "./Content.css";
 
 class Content extends Component {
   render() {
     return (
-      <div className="next-steps my-5">
-        <h2 className="my-5 text-center">What can I do next?</h2>
-        <Row className="d-flex justify-content-between">
-          {contentData.map((col, i) => (
-            <Col key={i} md={5} className="mb-4">
-              <h6 className="mb-3">
-                <a href={col.link}>
-                  <FontAwesomeIcon icon="link" className="mr-2" />
-                  {col.title}
-                </a>
-              </h6>
-              <p>{col.description}</p>
-            </Col>
-          ))}
-        </Row>
+      <div className="value-prop my-5">
+        <h2 className="my-5 text-center">What does IncomeMate provide?</h2>
+        <div className="pros-container">
+          <div className="col-container">
+            <h2>For Organizations</h2>
+            <ul>
+              <li>Simple Income Verification API</li>
+              <li>Connection with low-income customers</li>
+            </ul>
+          </div>
+          <div className="col-container">
+            <h2>For Low-Income Families</h2>
+            <ul>
+              <li>Connection with services providing low-income pricing.</li>
+              <li>Reduced paperwork and hassle, verify once and access all services.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     );
   }

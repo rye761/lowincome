@@ -1,0 +1,17 @@
+.col-container {
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 10px;
+  flex: 1;
+}
+
+.col-container h2 {
+  text-align: center;
+}
+
+.pros-container {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+}

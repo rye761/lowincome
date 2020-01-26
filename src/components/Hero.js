@@ -9,8 +9,7 @@ const Hero = () => (
       <h1 className="mb-4">Low income shouldn't mean under serviced.</h1>
 
       <p className="lead">
-        This is a sample application that demonstrates an authentication flow for
-        an SPA, using <a href="https://reactjs.org">React.js</a>
+        IncomeMate connects low-income families with the services they need at the price they can afford.
       </p>
     </div>
   </div>
