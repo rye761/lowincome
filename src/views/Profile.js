@@ -19,21 +19,21 @@ const Profile = () => {
     e.preventDefault();
 
     if(familyMembers==1 && income<=17750){
-    	alert('Income verified!');
+    	alert('I');
     }else if(familyMembers==2 && income<=21834){
-    	alert('Income verified!');    	
+    	alert('Income verified: You qualify for our low-income services.');    	
     }else if(familyMembers==3 && income<=26628){
-    	alert('Income verified!');
+    	alert('Income verified: You qualify for our low-income services.');
     }else if(familyMembers==4 && income<=33221){
-    	alert('Income verified!');
+    	alert('Income verified: You qualify for our low-income services.');
     }else if(familyMembers==5 && income<=37828){
-    	alert('Income verified!');
+    	alert('Income verified: You qualify for our low-income services.');
     }else if(familyMembers==6 && income<=41953){
-    	alert('Income verified!');
+    	alert('Income verified: You qualify for our low-income services.');
     }else if(familyMembers>=7 && income<=46077){
-    	alert('Income verified!');
+    	alert('Income verified: You qualify for our low-income services.');
     }else{
-    	alert("Income too high!");
+    	alert("Income verified: Sorry, you do not qualify for our low-income services.");
     }
 
   }
